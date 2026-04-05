@@ -1,293 +1,45 @@
-/* Styles globaux */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { color: #333; line-height: 1.6; background-color: #f9f9f9; }
 
-body {
-    color: #333;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
+nav { background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; top: 0; width: 100%; z-index: 1000; }
+nav ul { list-style: none; display: flex; justify-content: center; padding: 15px 0; }
+nav ul li { margin: 0 15px; }
+nav ul li a { text-decoration: none; color: #555; font-weight: bold; transition: 0.3s; }
+nav ul li a:hover { color: #007BFF; }
 
-/* Menu de navigation */
-nav {
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
+.section { padding: 100px 20px 60px 20px; }
+.bg-light { background-color: #ffffff; }
+.container { max-width: 1000px; margin: 0 auto; }
+.text-center { text-align: center; }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-}
+.header-presentation { text-align: left; margin-bottom: 50px; }
+.header-presentation h1 { font-size: 3.5rem; color: #2c3e50; margin-bottom: 5px; }
+.header-presentation .subtitle { font-size: 1.5rem; color: #7f8c8d; }
 
-nav ul li {
-    margin: 0 15px;
-}
+h2 { font-size: 1.8rem; color: #2c3e50; margin-bottom: 30px; border-bottom: 3px solid #007BFF; display: inline-block; padding-bottom: 5px; }
 
-nav ul li a {
-    text-decoration: none;
-    color: #555;
-    font-weight: bold;
-    transition: color 0.3s;
-}
+/* Écoles - Flex Cards */
+.schools-container { display: flex; gap: 20px; height: 300px; width: 100%; }
+.school-card { flex: 1; border-radius: 20px; background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; overflow: hidden; position: relative; cursor: pointer; transition: flex 0.5s ease-in-out; }
+.school-card:hover { flex: 3; }
+.school-info { padding: 30px; min-width: 300px; z-index: 2; position: relative; display: flex; flex-direction: column; justify-content: center; }
+.school-bg-image { position: absolute; top: 0; right: 0; width: 70%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.5s; z-index: 1; -webkit-mask-image: linear-gradient(to right, transparent, black 25%, black); mask-image: linear-gradient(to right, transparent, black 25%, black); }
+.school-card:hover .school-bg-image { opacity: 1; }
 
-nav ul li a:hover {
-    color: #007BFF;
-}
+/* Grilles & Cartes */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.card { background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); text-align: center; cursor: pointer; transition: 0.3s; border: 1px solid #f0f0f0; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.12); }
+.card img { max-width: 100%; height: 100px; object-fit: contain; margin-bottom: 15px; }
+.placeholder-img { height: 100px; background: #eee; border-radius: 10px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; color: #888; }
 
-/* Sections */
-.section {
-    padding: 100px 20px 60px 20px;
-    min-height: auto;
-}
-
-.bg-light {
-    background-color: #ffffff;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* --- PRÉSENTATION & EN-TÊTE --- */
-.header-presentation {
-    text-align: left;
-    margin-bottom: 50px;
-}
-
-.header-presentation h1 {
-    font-size: 3.5rem;
-    color: #2c3e50;
-    margin: 0 0 5px 0;
-}
-
-.header-presentation .subtitle {
-    font-size: 1.5rem;
-    color: #7f8c8d;
-    margin: 0;
-}
-
-h2 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 30px;
-    border-bottom: 3px solid #007BFF;
-    display: inline-block;
-    padding-bottom: 5px;
-    border-radius: 2px;
-}
-
-/* --- ÉCOLES (FLEX CARDS avec Fondu) --- */
-.education-block {
-    text-align: left; 
-    margin-bottom: 40px;
-}
-
-.schools-container {
-    display: flex;
-    gap: 20px;
-    height: 300px;
-    width: 100%;
-}
-
-.school-card {
-    flex: 1;
-    border-radius: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    border: 1px solid #f0f0f0;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    transition: flex 0.5s ease-in-out;
-}
-
-.school-card:hover {
-    flex: 3;
-}
-
-.school-info {
-    padding: 30px;
-    min-width: 300px;
-    z-index: 2;
-    background-color: transparent; /* Rendu transparent pour le fondu */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.school-info h3 {
-    font-size: 1.6rem;
-    color: #2c3e50;
-    margin-bottom: 5px;
-}
-
-.school-info .address {
-    font-style: italic;
-    color: #777;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-}
-
-.school-info .diploma {
-    font-size: 1rem;
-    color: #333;
-}
-
-.school-bg-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 70%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 1;
-    /* L'effet de fondu sur le bord gauche de l'image */
-    -webkit-mask-image: linear-gradient(to right, transparent, black 25%, black);
-    mask-image: linear-gradient(to right, transparent, black 25%, black);
-}
-
-.school-card:hover .school-bg-image {
-    opacity: 1;
-}
-
-/* --- GRILLE DES CARTES (STAGES & CERTIFICATIONS) --- */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #f0f0f0;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
-}
-
-.card img {
-    max-width: 100%;
-    height: 100px;
-    object-fit: contain;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    color: #2c3e50;
-}
-
-.placeholder-img {
-    height: 100px;
-    background: #eee;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #888;
-}
-
-/* --- LE STYLE DES MODALES (POP-UP) --- */
-.modal {
-    display: none; 
-    position: fixed;
-    z-index: 2000; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.6); 
-    backdrop-filter: blur(5px);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 40px;
-    border-radius: 20px;
-    width: 90%;
-    max-width: 700px;
-    max-height: 85vh;
-    overflow-y: auto; 
-    position: relative;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    text-align: left;
-}
-
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #aaa;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.close-btn:hover {
-    color: #e74c3c;
-}
-
-#modal-logo, #cert-modal-logo {
-    display: block;
-    margin: 0 auto 20px auto;
-    max-height: 120px;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-#modal-title, #cert-modal-title {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #2c3e50;
-}
-
-.modal-description {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
-
-.modal-info ul {
-    margin-left: 20px;
-    margin-top: 10px;
-}
-.modal-info li {
-    margin-bottom: 8px;
-}
-
-.modal-info ul ul {
-    margin-left: 25px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    list-style-type: circle;
-}
+/* Modales */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(5px); }
+.modal-content { background: #fff; margin: 5% auto; padding: 40px; border-radius: 20px; width: 90%; max-width: 750px; max-height: 85vh; overflow-y: auto; position: relative; box-shadow: 0 15px 30px rgba(0,0,0,0.2); text-align: left; }
+.close-btn { position: absolute; top: 20px; right: 30px; color: #aaa; font-size: 35px; font-weight: bold; cursor: pointer; }
+.close-btn:hover { color: #e74c3c; }
+#modal-logo, #cert-modal-logo { display: block; margin: 0 auto 20px; max-height: 120px; object-fit: contain; }
+.modal-description { background: #f8f9fa; padding: 20px; border-radius: 15px; margin-bottom: 20px; }
+.modal-info ul { margin-left: 20px; margin-top: 10px; }
+.modal-info li { margin-bottom: 8px; }
+.modal-info ul ul { margin-left: 25px; list-style-type: circle; }

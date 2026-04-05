@@ -20,7 +20,6 @@
 
     <section id="accueil" class="section">
         <div class="container">
-            
             <div class="header-presentation">
                 <h1>Florian BONNEFOY</h1>
                 <p class="subtitle">Étudiant en 2ème année de BTS SIO option SISR</p>
@@ -28,17 +27,14 @@
             
             <div class="education-block">
                 <h2>Mes Écoles et Diplômes</h2>
-                
                 <div class="schools-container">
-                    
                     <div class="school-card">
                         <div class="school-info">
                             <h3>ENC Bessières</h3>
                             <p class="address">📍 70 Boulevard Bessières, 75017 Paris</p>
                             <div class="diploma">
-                                <p><strong>BTS SIO</strong></p>
-                                <p>SISR</p>
-                                <p>Septembre 2024 - Juin 2026</p>
+                                <p><strong>BTS SIO option SISR</strong></p>
+                                <p>Septembre 2022 - Juin 2024</p>
                             </div>
                         </div>
                         <div class="school-bg-image" style="background-image: url('ENC_photo.jpg');"></div>
@@ -49,14 +45,12 @@
                             <h3>Lycée Newton</h3>
                             <p class="address">📍 1 Place Jules Verne, 92110 Clichy</p>
                             <div class="diploma">
-                                <p><strong>Baccalauréat</strong></p>
-                                <p>Mathématiques et NSI</p>
-                                <p>2023 - 2024</p>
+                                <p><strong>Baccalauréat (À compléter)</strong></p>
+                                <p>Année - Année</p>
                             </div>
                         </div>
                         <div class="school-bg-image" style="background-image: url('Newton_photo.jpg');"></div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -66,17 +60,14 @@
         <div class="container text-center">
             <h2>Mes Stages</h2>
             <div class="cards-grid">
-                
                 <div class="card" onclick="openStageModal(1)">
                     <img src="Logo_ENC.png" alt="Logo ENC Bessières">
                     <h3>ENC Bessières</h3>
                 </div>
-
                 <div class="card" onclick="openStageModal(2)">
                     <img src="groupe_eat_logo.jpg" alt="Logo AsureLoisir">
-                    <h3>AssurLoisirs (Groupe EAT)</h3>
+                    <h3>AsureLoisir (Groupe EAT)</h3>
                 </div>
-
             </div>
         </div>
     </section>
@@ -85,19 +76,15 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeStageModal()">&times;</span>
             <img id="modal-logo" src="" alt="Logo Entreprise">
-            <h2 id="modal-title">Nom de l'entreprise</h2>
-            
+            <h2 id="modal-title"></h2>
             <div class="modal-description">
                 <h3>À propos de l'entreprise</h3>
-                <p id="modal-desc"></p>
-            </div>
-
+                <p id="modal-desc"></p> </div>
             <div class="modal-info">
                 <p><strong>Date :</strong> <span id="modal-date"></span></p>
                 <p><strong>Service :</strong> <span id="modal-service"></span></p>
                 <h3>Missions et tâches :</h3>
-                <ul id="modal-missions">
-                    </ul>
+                <ul id="modal-missions"></ul>
             </div>
         </div>
     </div>
@@ -106,22 +93,18 @@
         <div class="container text-center">
             <h2>Développement Personnel</h2>
             <div class="cards-grid">
-                
                 <div class="card" onclick="openCertModal('anssi')">
                     <img src="MOOC ANSII.png" alt="Logo SecNum">
                     <h3>SecNum (MOOC de l'ANSSI)</h3>
                 </div>
-
                 <div class="card" onclick="openCertModal('ccna1')">
                     <img src="cisco-ccna.jpg" alt="Logo Cisco CCNA">
                     <h3>CCNA 1</h3>
                 </div>
-
                 <div class="card" onclick="openCertModal('ccna2')">
                     <img src="cisco-ccna.jpg" alt="Logo Cisco CCNA">
                     <h3>CCNA 2</h3>
                 </div>
-
             </div>
         </div>
     </section>
@@ -130,25 +113,33 @@
         <div class="modal-content">
             <span class="close-btn" onclick="closeCertModal()">&times;</span>
             <img id="cert-modal-logo" src="" alt="Logo Certification">
-            <h2 id="cert-modal-title">Nom de la certification</h2>
-            
+            <h2 id="cert-modal-title"></h2>
             <div class="modal-description">
                 <h3>Détails de la formation</h3>
                 <p><strong>Temps demandé :</strong> <span id="cert-modal-time"></span></p>
                 <p><strong>Nombre de chapitres :</strong> <span id="cert-modal-chapters"></span></p>
             </div>
-
             <div class="modal-info">
                 <h3>Description et notions abordées :</h3>
-                <p id="cert-modal-desc"><em>(Description détaillée à venir...)</em></p>
-            </div>
+                <div id="cert-modal-desc"></div> </div>
         </div>
     </div>
 
     <section id="enc" class="section bg-light">
         <div class="container text-center">
             <h2>Activité à l'ENC</h2>
-            <p>Contenu à venir...</p>
+            <p>Configuration d'un serveur ActiveDirectory, DHCP et DNS sur Windows Serveur</p>
+            <p>Configuration d'un réseau Cisco en ligne de commande sur Packet tracer (Routeurs, Switch, serveur DHCP, VLAN)</p>
+            <p>Développement d'un site</li></p>
+            <p>Création de script d'automatisation (PowerShell)</p>
+            <p>Virtualisation de machines (ProxMox, vSphere et VirtualBox)</p>
+            <p>Analyse de trames et de paquets réseaux sur Wireshark</p>
+            <p>Configuration d'un service d'administration à distance sécurisé avec SSH</p>
+            <p>Création de Certificats (Linux, OpenSSL)</p>
+            <p>Configuration d'un service d'administration à distance sécurisé avec SSH</p>
+            <p>Installation de GLPI</p>
+            <p>Développement d'un portfolio</p>
+            <p>Installation d'un pare-feu Stormshields et PfSense</p>
         </div>
     </section>
 
