@@ -11,7 +11,7 @@ const stagesData = {
     1: {
         title: "ENC Bessières",
         logo: "Logo_ENC.png",
-        date: "À compléter",
+        date: "9 Juin 2025 - 4 Juillet 2025",
         service: "Maintenance informatique, support",
         description: "L'ENC Bessières est un établissement d'enseignement prestigieux situé à Paris. J'ai eu l'opportunité d'y intervenir sur l'infrastructure réseau et le parc informatique.",
         missions: [
@@ -27,7 +27,7 @@ const stagesData = {
     2: {
         title: "AsureLoisir (Groupe EAT)",
         logo: "groupe_eat_logo.jpg",
-        date: "À compléter",
+        date: "12 Janvier 2026 - 20 Février 2026",
         service: "Support informatique",
         description: "AsureLoisir, membre du Groupe EAT, est spécialisé dans les solutions d'assurance professionnelles. Mon rôle était d'assurer la maintenance opérationnelle des équipements.",
         missions: [
